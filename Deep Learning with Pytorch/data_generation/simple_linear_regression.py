@@ -19,5 +19,5 @@ train_idx = idx[:int(N*.8)]
 val_idx = idx[int(N*.8):]
 
 # Generates train and validation sets
-x_train, y_train = x[train_idx], y[train_idx]
-x_val, y_val = x[val_idx], y[val_idx]
+X_train, y_train = x[train_idx], y[train_idx]
+X_val, y_val = x[val_idx], y[val_idx]
