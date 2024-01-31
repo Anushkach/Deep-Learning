@@ -2,7 +2,7 @@
 device= 'cuda' if torch.cuda.is_available() else 'cpu'
 
 # set learning  rate
-lr=0.1
+lr=0.01
 
 torch.manual_seed(42)
 # create model and send it to device
