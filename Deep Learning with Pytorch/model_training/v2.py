@@ -1,6 +1,6 @@
 
 # Define number of epochs
-n_epochs=10000
+n_epochs=1000
 
 losses=[]
 

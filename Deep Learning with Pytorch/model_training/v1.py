@@ -1,5 +1,5 @@
 
-n_epochs=10000
+n_epochs=1000
 losses=[]
 
 for epoch in tqdm(range(n_epochs)):
