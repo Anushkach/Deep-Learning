@@ -74,7 +74,10 @@ class StepByStep(object):
 
             # Step 1 - Computes our model's predicted output - forward pass
             yhat = self.model(x)
+            # Adjust the shape of y to be matched with yhat
+            y=y.unsqueeze(1)
             # Step 2 - Computes the loss
+
             loss = self.loss_fn(yhat, y)
             # Step 3 - Computes gradients for both "a" and "b" parameters
             loss.backward()
@@ -96,6 +99,8 @@ class StepByStep(object):
 
             # Step 1 - Computes our model's predicted output - forward pass
             yhat = self.model(x)
+            # adjust the shape of y to be matched with yhat
+            y=y.unsqueeze(1)
             # Step 2 - Computes the loss
             loss = self.loss_fn(yhat, y)
             # There is no need to compute Steps 3 and 4, since we don't update parameters during evaluation
