@@ -121,7 +121,7 @@ class StepByStep(object):
         # Once the data loader and step function, this is the same
         # mini-batch loop we had before
         mini_batch_losses = []
-        for x_batch, y_batch in iter(data_loader):
+        for x_batch, y_batch in data_loader:
             x_batch = x_batch.to(self.device)
             y_batch = y_batch.to(self.device)
 
