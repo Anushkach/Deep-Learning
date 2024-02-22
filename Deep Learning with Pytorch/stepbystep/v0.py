@@ -208,19 +208,19 @@ class StepByStep(object):
         # Detaches it, brings it to CPU and back to Numpy
         return y_hat_tensor.detach().cpu().numpy()
 
-    def plot_losses(self):
-        fig = plt.figure(figsize=(10, 4))
-        plt.plot(self.losses, label='Training Loss', c='b')
-        plt.plot(self.val_losses, label='Validation Loss', c='r')
-        plt.yscale('log')
-        plt.xlabel('Epochs')
-        plt.ylabel('Loss')
-        plt.legend()
-        plt.tight_layout()
-        return fig
+    # def plot_losses(self):
+    #     fig = plt.figure(figsize=(10, 4))
+    #     plt.plot(self.losses, label='Training Loss', c='b')
+    #     plt.plot(self.val_losses, label='Validation Loss', c='r')
+    #     plt.yscale('log')
+    #     plt.xlabel('Epochs')
+    #     plt.ylabel('Loss')
+    #     plt.legend()
+    #     plt.tight_layout()
+    #     return fig
 
-    def add_graph(self):
-        # Fetches a single mini-batch so we can use add_graph
-        if self.train_loader and self.writer:
-            x_sample, y_sample = next(iter(self.train_loader))
-            self.writer.add_graph(self.model, x_sample.to(self.device))
+    # def add_graph(self):
+    #     # Fetches a single mini-batch so we can use add_graph
+    #     if self.train_loader and self.writer:
+    #         x_sample, y_sample = next(iter(self.train_loader))
+    #         self.writer.add_graph(self.model, x_sample.to(self.device))
