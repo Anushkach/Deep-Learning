@@ -219,6 +219,7 @@ class StepByStep(object):
 
     def plot_losses(self):
         fig = plt.figure(figsize=(10, 4))
+        plt.clf()
         plt.plot(self.losses, label='Training Loss', c='b')
         plt.plot(self.val_losses, label='Validation Loss', c='r')
         plt.yscale('log')
@@ -226,6 +227,7 @@ class StepByStep(object):
         plt.ylabel('Loss')
         plt.legend()
         plt.tight_layout()
+        plt.close()
         return fig
 
     def add_graph(self):
