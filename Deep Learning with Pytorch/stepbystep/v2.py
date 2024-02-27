@@ -4,6 +4,7 @@ import torch
 import torch.nn as nn
 import random
 import matplotlib.pyplot as plt
+from tqdm.notebook import tqdm
 from torch.utils.tensorboard import SummaryWriter
 
 plt.style.use('fivethirtyeight')
@@ -149,7 +150,7 @@ class StepByStep(object):
         # To ensure reproducibility of the training process
         self.set_seed(seed)
 
-        for epoch in range(n_epochs):
+        for epoch in tqdm(range(n_epochs)):
             # Keeps track of the numbers of epochs
             # by updating the corresponding attribute
             self.total_epochs += 1
