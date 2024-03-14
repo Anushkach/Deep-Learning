@@ -250,7 +250,7 @@ class StepByStep(object):
         plt.ylabel('Loss')
         plt.legend()
         plt.tight_layout()
-        return fig
+        plt.show()
 
     def add_graph(self):
         # Fetches a single mini-batch so we can use add_graph
